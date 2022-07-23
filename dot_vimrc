@@ -1,0 +1,25 @@
+syntax on
+set number
+set wrap
+set showcmd
+set showmode
+set wildmenu
+set hlsearch
+exec "nohlsearch"
+let mapleader=" "
+
+
+noremap n h
+noremap e j
+noremap u k
+noremap h i
+noremap i l
+noremap I L
+noremap H I
+noremap l u
+noremap L U
+noremap k n
+noremap K N
+noremap U 5k
+noremap E 5j
+noremap ; :
