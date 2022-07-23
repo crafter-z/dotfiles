@@ -1,0 +1,15 @@
+Diagnostics:
+  ClangTidy:
+    Add:
+      [
+        cppcoreguidelines*,
+        performance*,
+        bugprone*,
+        portabilit-*,
+        modernize*,
+        google*
+      ]
+    Remove:
+      [
+        modernize-use-trailing-return-type
+      ]
