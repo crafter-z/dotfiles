@@ -137,3 +137,4 @@ function unsetproxy(){
     unset http_proxy https_proxy
     echo -e "终端代理已关闭。"
 }
+eval "$(zoxide init zsh)"
