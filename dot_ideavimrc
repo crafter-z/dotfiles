@@ -1,0 +1,108 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set nocompatible
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+set mouse=a
+set encoding=utf-8
+let &t_ut=''
+set list
+set listchars=tab:▸\ ,trail:▫
+set scrolloff=5
+set tw=0
+set indentexpr=
+set noexpendtab
+set backspace=indent,eol,start
+set foldlevel=99
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+set laststatus=2
+set autochdir
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+set noeb
+set ruler
+set cursorline
+
+"plugins"
+set keep-english-in-normal
+set easymotion
+set exchange
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set NERDTree
+set highlightedyank
+set vim-paragraph-motion
+set textobj-indent
+
+
+syntax on
+set number
+set wrap
+set showcmd
+set showmode
+set wildmenu
+set hlsearch
+exec "nohlsearch"
+set incsearch
+set ignorecase
+set smartcase
+noremap <SPACE> <Nop>
+let mapleader=" "
+set clipboard
+set digraph
+
+
+noremap n h
+noremap e j
+noremap u k
+noremap h i
+noremap i l
+noremap I L
+noremap H I
+noremap l u
+noremap L U
+noremap k n
+noremap K N
+noremap U 5k
+noremap E 5j
+noremap ; :
+
+
+map S :w<CR>
+map tt :NERDTree<CR>
+map tc :NERDTreeClose<CR>
+map <leader>sl <Action>(SplitVertically)
+map <leader>sk <Action>(SplitHorizontally)
+map <leader>r <Action>(ReformatCode)
+map <leader>cmb <Action>(CommentByBlockComment)
+map <leader>cml <Action>(CommentByLineComment)
+map <leader>dbg <Action>(Debug)
+map <leader>bp <Action>(ToggleLineBreakpoint)
+map <leader>rf <Action>(RenameFile)
+map <leader>re <Action>(RenameElement)
+map <leader>gd <Action>(GotoDeclaration)
+
+"map Plug"
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
