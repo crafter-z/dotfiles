@@ -1,33 +1,24 @@
-# Lines configured by zsh-newuser-install
+plugins=(
+  git
+  archlinux
+  sudo
+)
+export ZSH="/usr/share/oh-my-zsh/"
+source $ZSH/oh-my-zsh.sh
+
+# histfile
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/junquan/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
 
 # 引入zsh-syntax-highlighting、zsh-autosuggestions、zsh-completions
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-autoload -Uz compinit && compinit
 
 # 载入zoxide、starship
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-# Arch别名
-alias upgrade="yay -Syu"
-alias yain="yay -S"
-alias yare="yay -R"
-alias yarem="yay -Rns"
-alias yarep="yay -Si"
-alias yareps="yay -Ss"
-alias ls="exa"
-alias cd="z"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
