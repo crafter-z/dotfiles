@@ -18,6 +18,9 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # 载入zoxide、starship
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+alias ls="exa"
+alias cd="z"
+alias cat="bat"
 
 
 # >>> conda initialize >>>
