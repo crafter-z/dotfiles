@@ -1,7 +1,14 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
+local mux = wezterm.mux
 local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
 local SOLID_RIGHT_ARROW = utf8.char(0xe0b0)
+
+
+wezterm.on('gui-startup', function(cmd)
+  local tab, pane, window = mux.spawn_window(cmd or {})
+  window:gui_window():set_inner_size(1200,700)
+end)
 
 wezterm.on(
   'format-tab-title',
@@ -48,6 +55,7 @@ return{
     enable_scroll_bar = true,
     tab_bar_at_bottom = true,
     use_fancy_tab_bar = false,
+    enable_wayland = false,
 
     --colors
     colors = {
