@@ -5,6 +5,8 @@ plugins=(
 )
 export ZSH="/usr/share/oh-my-zsh/"
 source $ZSH/oh-my-zsh.sh
+export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.local/share
 
 # histfile
 HISTFILE=~/.histfile
