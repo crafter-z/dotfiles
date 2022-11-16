@@ -51,6 +51,7 @@ return{
         'Hack Nerd Font Mono',
         'Source Han Sans SC',
     },
+    font_size=14,
     color_scheme = 'atom',
     enable_scroll_bar = true,
     tab_bar_at_bottom = true,
