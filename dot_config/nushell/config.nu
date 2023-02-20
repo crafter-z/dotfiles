@@ -645,5 +645,4 @@ let-env config = {
   ]
 }
 
-source ~/.cache/starship/init.nu
 use ~/.config/nushell/conda.nu
